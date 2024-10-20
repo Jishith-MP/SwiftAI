@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  background-color: #202020;
+  padding: 0;
+}
+header{
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  text-align: center;
+}
+.box {
+  width: 95%;
+  height: 75vh;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 30px;
+  background-color: black;
+  color: white;
+  margin: 10% auto 20px auto; /* margin-top: 10%; margin-bottom: 0; margin-left and margin-right: auto */
+  overflow: auto;
+  font-size: 14px;
+  box-sizing: border-box;
+  position: relative;
+}
+header svg {
+  margin-left: 20px;
+}
+.box h3 {
+  color: aqua;
+}
+#copy {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  float: right;
+  color: white;
+  transform: scale(1.5);
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+#run {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  color: white;
+  transform: scale(2);
+  margin-top: 20px;
+  cursor: pointer;
+  margin-left: 80%;
+  mrgin-right: 10px;
+}
+.svg2 {
+  display: none;
+}
+
+#copy-css {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  float: right;
+  color: royalblue;
+  transform: scale(1.5);
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  z-index: 10;
+}
+#copy-js {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  float: right;
+  color: coral;
+  transform: scale(1.5);
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  z-index: 11;
+}
+header svg {
+  float: left;
+  transform: scale(1.5);
+  color: white;
+  margin: 10px 0px 0px 10px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+header h1 {
+  text-align: center;
+  color: white;
+  margin: 20px 0px 0px 0px;
+}
+header {
+  width: 100%;
+  height: 5%;
+}
+.contact {
+  position: fixed;
+  bottom: 2%;
+  left: 80%;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.contact svg {
+  transform: scale(2);
+}
+    
+.container {
+    display: flex;
+}
+.column {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    transition: border-bottom 0.3s ease;
+    position: relative; 
+    font-size: 14px;
+    color: white;
+  box-sizing: content-box;
+}
+.column:hover {
+    border-bottom: 4px solid hotpink;
+    border-bottom-width: 4px;
+  transition: border-bottom-width 0.3s ease;
+}
+
+.column.active {
+    border-bottom: 4px solid hotpink;
+    border-bottom-width: 4px;
+  transition: border-bottom-width 0.3s ease-in;
+
+}
+.column1:active {
+  background-color: black;
+}
+.column2:active {
+  background-color: black;
+}
+.column3:active {
+  background-color: black;
+}
+
+pre {
+    display: none; /* Hide all pre blocks by default */
+}
+
+.column.active + pre {
+    display: block; /* Display the adjacent pre block of active column */
+}
+#notice1 {
+  width: 90%;
+  height: 0;
+  opacity: 0;
+  padding: 0 10px;
+  background-color: #272727;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  color: wheat;
+  margin: 20px auto;
+  margin-top: 15%;
+  align-items: center;
+  animation: expandAndFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes expandAndFadeIn {
+  from {
+    height: 0;
+    opacity: 0;
+    padding: 0 10px;
+  }
+  to {
+    height: 110px;
+    opacity: 1;
+    padding: 20px 10px;
+  }
+}
+#notice1 svg {
+  color: white;
+  transform: scale(2.5);
+  margin: 6px 10px 6px 6px;
+}
+
+#box-header {
+  position: sticky;
+  top: -20px;
+  z-index: 1000;
+  background-color: #272727;
+  padding: 20px;
+}
+#box-header h3 {
+  display: inline;
+}
+#box-header button {
+  margin-left: 10px;
+}
+
+pre {
+  margin-top: 40px;
+}

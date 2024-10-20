@@ -1,0 +1,116 @@
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+header h1 {
+  margin-left: 10%;
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+ul{
+  list-style-type: none;
+  height: auto;
+  float: right;
+  margin-right: 7px;
+}
+.hamburger {
+  margin-bottom: 5px;
+  width: 40px;
+  height: 8px;
+  background-color: blueviolet;
+  border-radius: 20% / 90%;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure the image does not overflow */
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image fills the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color for overlay */
+}
+
+.welcome-head {
+    font-size: 2.5em; /* Adjust font size as needed */
+    line-height: 1.2; /* Adjust line height for spacing */
+    color: crimson;
+}
+
+button#create {
+    margin-top: 20px; /* Adjust spacing between text and button */
+    padding: 10px 20px; /* Adjust button padding */
+    background-color: deeppink; /* Example button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em; /* Adjust button font size */
+    cursor: pointer;
+}
+.container {
+  margin: 15px;
+  line-height: 1.2;
+  word-spacing: 4px;
+  font-family: 'poppins', sans-serif;
+}
+#learnmore {
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 15px 0px 15px 0px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap between items as needed */
+    justify-content: center; /* Center items horizontally */
+}
+
+.left-img, .right-img, .bottom-left-img, .bottom-right-img {
+    flex: 1 1 30%; /* Each item takes 50% width */
+    max-width: 60%; /* Ensure items don't exceed 50% width */
+}
+
+.left-img img, .right-img img, .bottom-left-img img, .bottom-right-img img {
+    display: block;
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+.sh1 {
+  color: deepskyblue;
+}
+.insta {
+  width: 35px;
+  cursor: pointer;
+}
+.followus {
+  display: flex;
+  align-items: center;
+}

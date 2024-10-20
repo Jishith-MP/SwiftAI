@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift AI/create website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+<svg id="navbtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg>
+    <h2>Swift <mark id="highlight">AI</mark></h2>
+  </header>
+  <nav id="navbar">
+    <h2 id="home">Home</h2>
+    <hr>
+    <h2>Features</h2>
+    <hr>
+    <h2 id="documentation">Documentation</h2>
+    <hr>
+    <h2 id="support">Support</h2>
+    <hr>
+    <h2 id="contact">Contact</h2>
+  </nav>
+  <div id="notice1">
+    <i class="bi bi-exclamation-circle"></i>
+    <h6>You can enter your website data into the input fields to generate your source code.</h6>
+  </div>
+
+  <div class="header-section">
+    <h3>Example Header Layout</h3>
+    <!--example header illustration--></!--example>
+        <div class="header-sec-illu" id="site-header">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="header-content">
+            <img class="header-logo" src="https://i.ibb.co/CBWT2QG/vecteezy-gnomes-valentine-clipart-free-vector-22479610.png" alt="logo">
+            <h1 id="header-title">Example title</h1>
+        </div>
+    </div>
+    <h1>Header section</h1>
+    <div id="appendFirst"></div>
+        <label for="heading">Heading</label>
+    <div class="input_container">
+    <input type="text" id="heading" placeholder="Enter heading name.." maxlength="10" required>
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter a title for your website (up to 28 characters). This title will appear in the header section."></i>
+    </div>
+
+    <div class="addelements">
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-plus-square" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Add Elements"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#" data-value="header-img" id="firstaddon">Header Logo</a></li>
+  </ul>
+</div>
+    </div>
+    <div class="addlmt1" id="addelement1">
+    <label for="logo">Your Logo</label>
+    <div class="input_container">
+    <input id="logo" type="url" placeholder="Enter URL for your header Logo.." max="40">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter your website logo URL"></i>
+    </div>
+    </div>
+    <label for="Title-size">Title size (optional)</label>
+    <div class="input_container">
+    <input id="Title-size" type="number" placeholder="Enter heading font size.." max="40">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Set the font size (upto 40px) for the heading text. Enter a size that makes your heading stand out and is easy to read."></i>
+    </div>
+    <label for="title-color">Heading color</label>
+    <div class="color-wrapper">
+    <input id="title-color" type="color">
+    </div>
+    <label for="fontSelector">Choose heading font family</label>
+    <select id="fontSelector">
+  <option value="Arial, sans-serif">Arial</option>
+  <option value="Helvetica, sans-serif">Helvetica</option>
+  <option value="Times New Roman, serif">Times New Roman</option>
+  <option value="Georgia, serif">Georgia</option>
+  <option value="Verdana, sans-serif">Verdana</option>
+  <option value="Courier New, monospace">Courier New</option>
+  <option value="Arial Black, sans-serif">Arial Black</option>
+  <option value="Comic Sans MS, Comic Sans, cursive">Comic Sans MS</option>
+  <option value="Impact, Charcoal, sans-serif">Impact</option>
+  <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+</select>
+    <label for="header-color"><b>Select best bg-color fit your header!</b></label>
+        <div class="color-wrapper">
+    <input value="#87ceeb" type="color" id="header-color">
+        </div>    
+    <label for="header-padding">Header padding in px (optional)</label>
+    <div class="input_container">
+    <input type="number" id="header-padding" placeholder="Enter header padding..." max="30">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Adjust the padding (upto 30px) around the header to control the space between the header content and its borders. This helps improve the visual balance and readability."></i>
+    </div>
+    <label for="header-height">Header height in px (optional)</label>
+    <div class="input_container">
+    <input type="number" id="header-height" placeholder="Enter header height.." max="100">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Set the maximum height for the header. The height should not exceed 100 pixels to ensure the header remains within a standard size and maintains a balanced layout."></i>
+    </div>
+    <label for="header-img">Background image (optional)</label>
+    <div class="input_container">
+    <input type="url" id="header-img" placeholder="Enter Background image URL..">
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the URL of the image you want to use in the header. This image will be displayed at the top of your website."></i>
+    </div>
+    <label for="header-position">Position</label>
+    <select id="header-position">
+      <option value="relative">relative</option>
+      <option value="absolute">absolute</option>
+      <option value="fixed">fixed</option>
+      <option value="static">static</option>
+    </select>
+    <label for="menu-icon-color">Hamburger Icon color</label>
+        <div class="color-wrapper">
+    <input type="color" id="menu-icon-color" placeholder="Choose hamburger menu icon color">
+        </div>     
+  </div>
+<div class="container">
+  <h1>Content section</h1>
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-plus-square" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Add grid system"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" id="secondaddon">2×2 grid</a></li>
+    <li><a class="dropdown-item" id="thirdaddon">1×1 grid</a></li>
+    <li><a class="dropdown-item" id="fourthaddon">3×3 grid</a></li>
+  </ul>
+</div>
+  <div class="addonAll">
+  <div class="addelement2" id="addelement2">
+  <label style="color: yellow; font-size: 23px;">2×2 layout</label><br>
+  <i class="bi bi-grid"></i><br>
+   <label for="two_layout_brd_rds">Border radius in px(optional)</label><br>
+    <div class="input_container">
+    <input type="number" id="two_layout_brd_rds" placeholder="Enter 2×2 grid layout border radius..">
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the border radius of 2×2 grid layout(upto 60px). This grid will be displayed at the main section of your website."></i>
+    </div>
+    <label>Select grid elements</label>
+     <select class="two-select">
+       <option value="image">image</option>
+      <option value="text">text</option>
+    </select>
+    <div id="twointotwolyt">
+    <label>Background color (optional)</label>
+    <input type="color" id="two_layout_bgcolor"><br>
+    <label>First child text content</label>
+    <input type="text" id="two_layout_firstchild" maxlength="200" placeholder="Enter 1st child content..">
+    <label>Second child text content</label>
+    <input type="text" id="two_layout_secondchild" maxlength="200" placeholder="Enter 2nd child content..">
+    <label>Third child text content</label>
+    <input type="text" id="two_layout_thirdchild" maxlength="200" placeholder="Enter 3rd child content..">
+    <label>Fourth child text content</label>
+    <input type="text" id="two_layout_fourthchild" maxlength="200" placeholder="Enter 4th child content..">
+    </div>
+          <div id="twolytimg">
+    <label>First child image URL</label>
+    <input type="url" id="two_layout_firstchild-IMG" maxlength="50" placeholder="Enter 1st child image url..">
+    <label>Second child image URL</label>
+    <input type="url" id="two_layout_secondchild-IMG" maxlength="50" placeholder="Enter 2nd child image url..">
+    <label>Third child image URL</label>
+    <input type="url" id="two_layout_thirdchild-IMG" maxlength="50" placeholder="Enter 3rd child image url..">
+    <label>Fourth child image URL</label>
+    <input type="url" id="two_layout_fourthchild-IMG" maxlength="50" placeholder="Enter 4th child image url..">
+      </div>
+
+  </div><br>
+    <div id="addelement3">
+  <label style="color: yellow;">1×1 layout</label><br>
+  <i class="bi bi-layout-split"></i><br>
+      <label>Border radius in px(optional)</label><br>
+    <div class="input_container">
+    <input type="number" id="one_layout_brd_rds" placeholder="Enter 1×1 grid layout border radius..">
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the border radius of 1×1 grid layout(upto 60px). This grid will be displayed at the main section of your website."></i>
+    </div>
+      <label>Select grid elements</label>
+       <select class="one-select">
+      <option value="image">image</option>
+      <option value="text">text</option>
+    </select>
+          <div id="oneintoonelyt">
+    <label>Background color (optional)</label><br>
+    <input type="color" id="one_layout_bgcolor"><br>
+    <label>First child text content</label>
+    <input type="text" id="one_layout_firstchild" maxlength="200" placeholder="Enter 1st child content..">
+          </div>
+      <div id="onelytimg">
+    <label>First child image URL</label>
+    <input type="url" id="one_layout_firstchild-IMG" maxlength="50" placeholder="Enter 1st child image url..">
+      </div>
+  </div><br>
+  <div id="addelement4">
+  <label style="color: yellow;">3×3 layout</label><br>
+  <i class="bi bi-grid-3x3"></i><br>
+    <label>Border radius in px(optional)</label>
+    <div class="input_container">
+    <input type="number" id="three_layout_brd_rds" placeholder="Enter 3×3 grid layout border radius..">
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the border radius of 3×3  grid layout(upto 60px). This grid will be displayed at the main section of your website."></i>
+    </div>
+    <label>Select grid elements</label>
+    <select class="three-select">
+      <option value="image">image</option>
+      <option value="text">text</option>
+    </select>
+    <div id="threeintothreelyt">
+    <label>Background color (optional)</label><br>
+    <input type="color" id="three_layout_bgcolor"><br>
+    <label>First child text content</label>
+    <input type="text" id="three_layout_firstchild" maxlength="200" placeholder="Enter 1st child content..">
+    <label>Second child text content</label>
+    <input type="text" id="three_layout_secondchild" maxlength="200" placeholder="Enter 2nd child content..">
+    <label>Third child text content</label>
+    <input type="text" id="three_layout_thirdchild" maxlength="200" placeholder="Enter 3rd child content..">
+    <label>Fourth child text content</label>
+    <input type="text" id="three_layout_fourthchild" maxlength="200" placeholder="Enter 4th child content..">
+    <label>Fifth child text content</label>
+    <input type="text" id="three_layout_fifthchild" maxlength="200" placeholder="Enter 5th child content..">
+    <label>Sixth child text content</label>
+    <input type="text" id="three_layout_sixthchild" maxlength="200" placeholder="Enter 6st child content..">
+    <label>Seventh child text content</label>
+    <input type="text" id="three_layout_seventhchild" maxlength="200" placeholder="Enter 7nd child content..">
+    <label>eighth child text content</label>
+    <input type="text" id="three_layout_eigthchild" maxlength="200" placeholder="Enter 8rd child content..">
+    <label>Ninth child text content</label>
+    <input type="text" id="three_layout_ninthchild" maxlength="200" placeholder="Enter 9th child content..">
+
+    </div>
+      <div id="threelytimg">
+    <label>First child image URL</label>
+    <input type="url" id="three_layout_firstchild-IMG" maxlength="50" placeholder="Enter 1st child image url..">
+    <label>Second child image URL</label>
+    <input type="url" id="three_layout_secondchild-IMG" maxlength="50" placeholder="Enter 2nd child image url..">
+    <label>Third child image URL</label>
+    <input type="url" id="three_layout_thirdchild-IMG" maxlength="50" placeholder="Enter 3rd child image url..">
+    <label>Fourth child image URL</label>
+    <input type="url" id="three_layout_fourthchild-IMG" maxlength="50" placeholder="Enter 4th child image url..">
+    <label>Fifth child image URL</label>
+    <input type="url" id="three_layout_fifthchild-IMG" maxlength="50" placeholder="Enter 5st child image url..">
+    <label>Sixth child image URL</label>
+    <input type="url" id="three_layout_sixthchild-IMG" maxlength="50" placeholder="Enter 6nd child image url..">
+    <label>Seventh child image URL</label>
+    <input type="url" id="three_layout_seventhchild-IMG" maxlength="50" placeholder="Enter 7rd child image url..">
+    <label>Eighth child image URL</label>
+    <input type="url" id="three_layout_eighthchild-IMG" maxlength="50" placeholder="Enter 8th child image url..">
+    <label>Ninth child image URL</label>
+    <input type="url" id="three_layout_ninthchild-IMG" maxlength="50" placeholder="Enter 9th child image url..">
+
+      </div>
+  </div><br>
+  </div>
+
+    <label for="text"><b>Paragraph - 1</b></label>
+     <div class="input_container">
+     <textarea class="article" id="article" required rows="2" maxlength="600" placeholder="Enter paragraph content here.."></textarea>
+       <i class="bi bi-exclamation-circle" style="color: white; margin-right: 25px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Write up to 600 words for your main content paragraph. You can add up to 10 additional paragraphs by clicking the plus icon. This space is for the core information you want to share with your visitors."></i>
+      </div>
+  <div id="dropdown-container"></div>
+
+  <div id="secondaddongrid"></div>
+  <div id="addelement5">
+
+   </div><br>
+
+  <div id="addelement6">
+
+  </div><br>
+  <div id="addelement7">
+
+  </div>
+  <div id="addelement8">
+
+  </div>
+
+    <svg id="contentsvg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
+        <path d="M8 0q-.264 0-.523.017l.064.998a7 7 0 0 1 .918 0l.064-.998A8 8 0 0 0 8 0M6.44.152q-.52.104-1.012.27l.321.948q.43-.147.884-.237L6.44.153zm4.132.271a8 8 0 0 0-1.011-.27l-.194.98q.453.09.884.237zm1.873.925a8 8 0 0 0-.906-.524l-.443.896q.413.205.793.459zM4.46.824q-.471.233-.905.524l.556.83a7 7 0 0 1 .793-.458zM2.725 1.985q-.394.346-.74.74l.752.66q.303-.345.648-.648zm11.29.74a8 8 0 0 0-.74-.74l-.66.752q.346.303.648.648zm1.161 1.735a8 8 0 0 0-.524-.905l-.83.556q.254.38.458.793l.896-.443zM1.348 3.555q-.292.433-.524.906l.896.443q.205-.413.459-.793zM.423 5.428a8 8 0 0 0-.27 1.011l.98.194q.09-.453.237-.884zM15.848 6.44a8 8 0 0 0-.27-1.012l-.948.321q.147.43.237.884zM.017 7.477a8 8 0 0 0 0 1.046l.998-.064a7 7 0 0 1 0-.918zM16 8a8 8 0 0 0-.017-.523l-.998.064a7 7 0 0 1 0 .918l.998.064A8 8 0 0 0 16 8M.152 9.56q.104.52.27 1.012l.948-.321a7 7 0 0 1-.237-.884l-.98.194zm15.425 1.012q.168-.493.27-1.011l-.98-.194q-.09.453-.237.884zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a7 7 0 0 1-.458-.793zm13.828.905q.292-.434.524-.906l-.896-.443q-.205.413-.459.793zm-12.667.83q.346.394.74.74l.66-.752a7 7 0 0 1-.648-.648zm11.29.74q.394-.346.74-.74l-.752-.66q-.302.346-.648.648zm-1.735 1.161q.471-.233.905-.524l-.556-.83a7 7 0 0 1-.793.458zm-7.985-.524q.434.292.906.524l.443-.896a7 7 0 0 1-.793-.459zm1.873.925q.493.168 1.011.27l.194-.98a7 7 0 0 1-.884-.237zm4.132.271a8 8 0 0 0 1.012-.27l-.321-.948a7 7 0 0 1-.884.237l.194.98zm-2.083.135a8 8 0 0 0 1.046 0l-.064-.998a7 7 0 0 1-.918 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+    </svg>
+    <div id="add-on"></div>
+  <label for="content-margin"> Content Margin in (px)</label>
+  <div class="input_container">
+  <input type="number" id="content-margin" placeholder="Enter content margin value.." max="40" required>
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Adjust the margin around the content to control the space between the content and the edges of its container. This helps in creating a well-spaced and visually appealing layout."></i>
+  </div>
+    <label for="content-font-size"> Content Font size (optional)</label>
+  <div class="input_container">
+  <input type="number" id="content-font-size" placeholder="Enter font size value.." max="30">   
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Set the font size for the main content. Choose a size that ensures readability and fits well within your design."></i>
+  </div>
+  <label for="content-fontSelector"><b>Font family</b></label>
+  <select id="content-fontSelector">
+    <option value="Arial, sans-serif">Arial</option>
+    <option value="Helvetica, sans-serif">Helvetica</option>
+    <option value="Times New Roman, serif">Times New Roman</option>
+    <option value="Georgia, serif">Georgia</option>
+    <option value="Verdana, sans-serif">Verdana</option>
+    <option value="Courier New, monospace">Courier New</option>
+    <option value="Arial Black, sans-serif">Arial Black</option>
+    <option value="Comic Sans MS, Comic Sans, cursive">Comic Sans MS</option>
+    <option value="Impact, Charcoal, sans-serif">Impact</option>
+    <option value="Tahoma, Geneva, sans-serif">Tahoma</option><br>
+  </select>
+
+
+
+
+  <div id="thirdaddongrid"></div>
+    <div id="addelement9">
+    <h3>Text content elements</h3>
+      <label>H1</label>
+      <input type="text" id="h1tag" placeholder="Enter h1 tag content..">
+  </div>
+  <div id="addelement10">
+    <h3>Links</h3>
+    <label>Link URL</label>
+    <input type="text" id="linktagurl" placeholder="Enter link url">
+    <label>Link text content</label>
+    <input type="text" id="linktagtxt" placeholder="Enter link text content">
+  </div>
+  <div id="addelement11">
+    <h3>Media elements</h3>
+    <label>Image</label>
+    <input type="text" id="imagetagurl" placeholder="Enter image url">
+    <label>image alt</label>
+    <input type="text" id="imagetagtxt" placeholder="Enter image alt content"> 
+  </div>
+  <div id="addelement12">
+    <h3>Lists</h3>
+    <label>Unordered list</label>
+    <input type="text" id="ul" placeholder="Enter ul list contents..">
+    <label>Ordered list</label>
+    <input type="text" id="ol" placeholder="Enter ol list contents..">
+  </div>
+
+
+
+  <label for="content-font-color">Content Font color</label><br>
+      <div class="color-wrapper">
+  <input type="color" id="content-font-color">
+      </div>     
+        </div>
+    <div class="seo-optimization">
+      <h1 style="color: coral;">Meta tags</h1>
+        <div class="first-col">
+            <div class="item">
+                <h5>SEO Optimization Tags</h5>
+             <div class="toggle-container">
+                <input type="checkbox" id="toggle_one" class="toggle-input">
+                <label for="toggle_one" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            </div>
+            <div class="item">
+                <h5>Social Media Tags</h5>
+            <div class="toggle-container">
+                <input type="checkbox" id="toggle_two" class="toggle-input">
+                <label for="toggle_two" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            </div>
+            <div class="item">
+                <h5>Mobile Optimization Tags</h5>
+            <div class="toggle-container">
+                <input type="checkbox" id="toggle_three" class="toggle-input">
+                <label for="toggle_three" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            </div>
+            <div class="item">
+                <h5>Security Tags</h5>
+             <div class="toggle-container">
+                <input type="checkbox" id="toggle_four" class="toggle-input">
+                <label for="toggle_four" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            </div>
+            <div class="item">
+                <h5>Performance and Usability Tags</h5>
+             <div class="toggle-container">
+                <input type="checkbox" id="toggle_five" class="toggle-input">
+                <label for="toggle_five" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            </div>
+        </div>
+    </div>
+  <div class="footer-section">
+    <h3>Footer Layout Example</h3>
+
+     <div class="footer-cont-illu" id="site-footer">
+        <p>Mountain view , USA California 07</p>
+        <p class="additonal_ctn">Example additional content</p>
+        <p id="end">example copyright information(© 2024 All Right Reserved)</p>
+    </div>
+
+
+    <h1>Footer section</h1>
+    <label>Footer contact information</label>
+    <div class="input_container">
+    <input type="text" id="footer-content" placeholder="Enter footer text.." maxlength="100" required>
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the text for your footer (upto 100 words), such as contact information, address, or any additional details you want to display at the bottom of your website."></i>
+    </div>
+        <div class="color-wrapper">
+      <input value="#ffffff" type="color" id="footer-cnt-info-color">
+        </div>
+    <div class="input_container">
+    <input type="number" id="footer-cnt-info-size" placeholder="Enter contact info text size" max="30">
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Set the font size for the footer text, with a maximum limit of 30 pixels. Ensure the text is readable and fits well within the footer section."></i>
+    </div>
+    <label>Additional content (optional)</label>
+    <div class="input_container">
+    <input type="text" id="footer-add-content" placeholder="Enter footer additional content here.." maxlength="50">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add any extra information you want to include in the footer, such as links, social media icons, or disclaimers. This content will appear at the bottom of every page."></i>
+    </div>
+      <label>Copywrite and year</label>
+    <div class="input_container">
+    <input type="text" id="copy-year" placeholder="enter copywrite info" max="40" required>
+<i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the copyright year and any additional text for the footer's last section, such as 'All rights reserved.' This information will be displayed at the bottom of your website to indicate copyright status."></i>
+    </div>
+    <label>Footer bg color</label>
+    <div class="color-wrapper">
+    <input type="color" id="footer-bgcolor">
+    </div>
+    <label>position</label>
+     <select id="footer-position">
+      <option value="fixed">fixed</option>
+      <option value="absolute">absolute</option>
+      <option value="relative">relative</option>
+      <option value="static">static</option>
+    </select>
+    <label>Footer background image (optional)</label>
+    <div class="input_container">
+    <input type="url" id="footer-bgimg" placeholder="Enter footer bg Image URL">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Enter the URL for the background image of the footer. This image will be displayed behind the footer content, enhancing the overall visual design."></i>
+    </div>
+    <label>Footer height</label>
+    <div class="input_container">
+    <input type="number" id="footer-height" placeholder="Enter footer height.." max="100">
+      <i class="bi bi-exclamation-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Set the maximum height for the footer to 100 pixels. This ensures the footer remains within a standard size and maintains a balanced layout."></i>
+    </div>
+  </div>
+<div class="preview-box">
+<button id="run">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+  </svg>
+</button>
+<div id="message-box">
+  <p>Before generating the code, you can preview how it looks and make changes if needed.</p>
+  <div id="arrow"></div>
+</div>
+</div><br>
+  <div class="btn">
+  <button type="submit" id="generate">Generate Source code</button>
+  </div>
+  <p class="copywrite"><em>&copy; 2024</em></p>
+  <div id="loading" class="loading-screen">
+    <div class="loader"></div><br>
+    <p id="loader_text">Loading...</p>
+  </div>
+      <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+ <script src="main.js"></script>
+ <script src="textareaaddon.js"></script>
+ <script src="textareaaddonne.js"></script>
+   </body>
+</html>
